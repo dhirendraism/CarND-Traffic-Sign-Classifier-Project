@@ -31,13 +31,13 @@ The goals / steps of this project are the following:
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup
+### Writeup
 
 You're reading it! and here is a link to my [project code](https://github.com/dhirendraism/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Checked the input data.
+#### 1. Checked the input data.
 Code in 2nd cell.
 > 	Number of training examples = 34799
 > 
@@ -53,15 +53,15 @@ Code in 2nd cell.
 > 
 > 	...
 
-####2. Randomly took an image and checked in visually.
+#### 2. Randomly took an image and checked in visually.
 Code in 3rd cell.
 
 ![alt text][image1]
-####3. Checked the distribution of data.
+#### 3. Checked the distribution of data.
 Code in 4th cell.
 
 ![alt text][image2]
-####4. Augmented the data.
+#### 4. Augmented the data.
 Code in 8th & 9th cell.
 
 * Took a random set of distortion operations.
@@ -75,7 +75,7 @@ Code in 8th & 9th cell.
 
 ###Design and Test a Model Architecture
 
-####1. Pre-Processing the imgaes.
+#### 1. Pre-Processing the imgaes.
 Code in 11th cell.
 
 * Transformed images to Grey Scale.
@@ -85,12 +85,12 @@ Code in 11th cell.
 > 
 > Shape after preprocessing:  (34810, 32, 32, 1)
 
-####2. Validate processed image.
+#### 2. Validate processed image.
 Code in 12th cell.
 
 ![alt text][image4]
 
-####3. Model Architecture.
+#### 3. Model Architecture.
 Code in 14th cell.
 
 * I started off with the LeNet model and did some experiments by replacing the Max Pool by Average Pool in Lenet. This helped me in better extraction of features and improvement in accuracy by 2-4%. 
@@ -143,15 +143,15 @@ Batch Size: 128
 
 Used AdamOptimizer for optimizing the learning.
 
-####4. Evaluation Pipeline
+#### 4. Evaluation Pipeline
 Code in 20th cell.
 
 I created a Evaluation Pipeline where Match_Percentage, Precision of prediction, Recall and Total accuracy was calculated. This helped me in identifying the Models accuracy and evaluate if Model for Underfitting or Overfitting.
-####5. Training Model
+#### 5. Training Model
 Code in 21th cell.
 
 While training the kept track of validation accuracy to see how does model behaves with Epochs increasing value. This helped me in finding the sweet spot for Epoch and Learning rate. Persisted the model on the drive for later retrieval for prediction and evaluations.
-####6. Compared the accuracy for Training and Validation.
+#### 6. Compared the accuracy for Training and Validation.
 Code in 23rd cell.
 
 This gave me an idea of overfitting and underfitting.
@@ -160,14 +160,14 @@ This gave me an idea of overfitting and underfitting.
 
 > Validation Accuracy = 0.945
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Accuracy in test images.
+#### 1. Accuracy in test images.
 Code in 24th cell.
 
 > Test Accuracy = 0.929
 
-####2. German Traffic Sign Images from web.
+#### 2. German Traffic Sign Images from web.
 
 Here are five German traffic signs that I found on the web:
 
@@ -176,7 +176,7 @@ Here are five German traffic signs that I found on the web:
 
 The first image might be difficult to classify because ...
 
-####3. Output
+#### 3. Output
 Code in 
 Here are the results of the prediction:
 
@@ -191,7 +191,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of ...
 
-####3. Softmax for prediction of images.
+#### 4. Softmax for prediction of images.
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
